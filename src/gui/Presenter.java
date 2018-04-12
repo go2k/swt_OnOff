@@ -15,7 +15,6 @@ public class Presenter implements Observer {
     private View view;
     private OnOffModel onOffModel;
 
-
     public Presenter() {
         view = new OnOffView();
         view.setButtonListener(new ActionListener() {
@@ -33,13 +32,15 @@ public class Presenter implements Observer {
 
         boolean istAn = onOffModel.isAn();
         String text = onOffModel.getAnAusText();
-
         view.setAusgabeText(text);
+
 
         if (istAn) {
             view.setButtonText("Aus");
         } else {
             view.setButtonText("An");
         }
+
+
     }
 }
